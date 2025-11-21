@@ -1,4 +1,7 @@
-# model_comparison.py
+'''
+    对已经训练好的全参模型和原来对比
+'''
+
 import json
 import torch
 import numpy as np

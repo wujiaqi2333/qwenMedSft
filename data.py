@@ -1,3 +1,7 @@
+'''
+    分割数据集
+'''
+
 from modelscope.msdatasets import MsDataset
 import json
 import random

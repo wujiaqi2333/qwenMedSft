@@ -1,3 +1,7 @@
+'''
+    测试对比三个模型对同一个问题的回答
+    问题在代码里写死
+'''
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
@@ -60,7 +64,7 @@ def predict_single(model_path, messages, is_lora=False, base_model_path=None):
 # 测试数据
 test_texts = {
     'instruction': "你是一个医学专家，你需要根据用户的问题，给出带有思考的回答。",
-    'input': "医生，我最近查出有肝硬化，但还不知道到了什么程度。请问肝硬化晚期会有哪些临床表现？这些并发症对我的预后会有怎样的影响？"
+    'input': "医生，我最近被诊断为糖尿病，听说碳水化合物的选择很重要，我应该选择什么样的碳水化合物呢？"
 }
 
 messages = [

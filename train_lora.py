@@ -1,3 +1,6 @@
+'''
+    训练Lora模型，模型存储在output/Qwen3-0.6B里
+'''
 import json
 import pandas as pd
 import torch

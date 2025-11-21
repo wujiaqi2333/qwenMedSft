@@ -1,4 +1,6 @@
-# model_comparison.py
+'''
+    对已经训练好的Lora模型和原来对比
+'''
 import json
 import torch
 import numpy as np
@@ -372,7 +374,7 @@ def main():
     """主函数"""
     # 配置参数
     BASE_MODEL_PATH = "./Qwen3-0.6B"
-    FINETUNED_MODEL_PATH = "./output/Qwen3-param/checkpoint-1082"
+    FINETUNED_MODEL_PATH = "./output/Qwen3-0.6B/checkpoint-1082"
     VAL_DATA_PATH = "val.jsonl"
     SAMPLE_SIZE = 50  # 评估使用的样本数量
 

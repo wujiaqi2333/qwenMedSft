@@ -1,3 +1,6 @@
+'''
+    训练全参数模型，模型存储在output/Qwen3-param里
+'''
 import json
 import pandas as pd
 import torch

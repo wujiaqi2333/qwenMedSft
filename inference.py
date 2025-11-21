@@ -1,3 +1,7 @@
+'''
+    已经训练好的全参数模型对某个问题的回答
+    问题在代码里写死
+'''
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
