@@ -1,0 +1,8 @@
+swanlab==0.5.7
+modelscope==1.22.0
+transformers==4.51.3
+datasets==3.2.0
+peft==0.11.1
+accelerate==1.6.0
+pandas
+addict
