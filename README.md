@@ -4,19 +4,18 @@
 
 [![](https://raw.githubusercontent.com/SwanHubX/assets/main/badge1.svg)](https://swanlab.cn/@ZeyiLin/qwen3-sft-medical/overview)
 
-- **基础模型**：[Qwen3-1.7B](https://modelscope.cn/models/Qwen/Qwen3-1.7B/summary)
+- **基础模型**：[Qwen3-0.6B](https://modelscope.cn/models/Qwen/Qwen3-0.6B/summary)
 - **微调后模型**：[Qwen3-1.7b-Medical-R1-sft](https://modelscope.cn/models/testUser/Qwen3-1.7b-Medical-R1-sft/summary)
 - **数据集**：[delicate_medical_r1_data](https://modelscope.cn/datasets/krisfu/delicate_medical_r1_data)
 - **SwanLab**：[qwen3-sft-medical](https://swanlab.cn/@ZeyiLin/qwen3-sft-medical/runs/agps0dkifth5l1xytcdyk/chart)
 - **微调方式**：全参数微调、LoRA微调
 - **推理风格**：R1推理风格
 - **算力要求**：
-  - **全参数微调**：32GB显存
-  - **LoRA微调**：28GB显存
-- **图文教程**：[Qwen3大模型微调入门实战（完整代码）](https://zhuanlan.zhihu.com/p/1903848838214705484)
+  - **全参数微调**：8GB显存
+  - **LoRA微调**：6GB显存
 - **Jupyter Notebook**：[train.ipynb](train.ipynb)
 
-> 如果需要进一步降低显存需求，可以使用Qwen3-0.6B模型，或调低`MAX_LENGTH`。
+> 为了降低显存需求，使用的是Qwen3-0.6B模型。
 
 ## 安装环境
 
