@@ -22,6 +22,9 @@
 
 ```
 qwenMedSft/
+├── dataset/                    # 数据集目录
+│   ├── train.jsonl
+│   └── val.jsonl
 ├── output/                    # 训练输出的模型
 │   ├── Qwen3-0.6B/            # Lora
 │   │   ├── checkpoint-400
@@ -36,6 +39,8 @@ qwenMedSft/
 │   ├── data.py               # 数据加载和分割保存数据集
 │   ├── train_lora.py         # 训练Lora模型，模型存储在output/Qwen3-0.6B里
 │   ├── train.py              # 训练全参数模型，模型存储在output/Qwen3-param里
+│   ├── test_lora.py          # 测试Lora模型对输入问题的回答
+│   ├── test_param.py         # 测试全参数模型对输入问题的回答
 │   ├── infer.py              # 测试对比三个模型对同一个问题的回答
 │   ├── model_compare.py      # 对已经训练好的Lora模型和原来对比
 │   └── model_param.py        # 对已经训练好的全参模型和原来对比
@@ -110,14 +115,19 @@ LLM:
 
 ## 推理
 
-**全参数微调**
+**原模型、lora微调、全参数微调的三个模型对同一个问题的回答**
 ```bash
-python inference.py
+python infer.py
 ```
 
-**LoRA微调**
+**已经训练好的lora模型对某个问题的回答**
 ```bash
-python inference_lora.py
+python test_lora.py
+```
+
+**已经训练好的全参数模型对某个问题的回答**
+```bash
+python test_param.py
 ```
 
 ## 相关工具
