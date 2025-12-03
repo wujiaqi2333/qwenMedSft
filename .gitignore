@@ -1,4 +1,4 @@
 output/
-train.jsonl
-val.jsonl
+dataset/train.jsonl
+dataset/val.jsonl
 Qwen3-0.6B/

@@ -13,9 +13,41 @@
 - **算力要求**：
   - **全参数微调**：8GB显存
   - **LoRA微调**：6GB显存
-- **Jupyter Notebook**：[train.ipynb](train.ipynb)
+
 
 > 为了降低显存需求，使用的是Qwen3-0.6B模型。
+
+
+## 项目结构
+
+```
+qwenMedSft/
+├── output/                    # 训练输出的模型
+│   ├── Qwen3-0.6B/            # Lora
+│   │   ├── checkpoint-400
+│   │   ├── checkpoint-800
+│   │   └── checkpoint-1082
+│   ├── Qwen3-param/           # 全参数
+│   │   ├── checkpoint-400
+│   │   ├── checkpoint-800
+│   │   └── checkpoint-1082
+├── Qwen3-0.6B/               # 开源下载下来的原模型
+├── src/                      # 源代码
+│   ├── data.py               # 数据加载和分割保存数据集
+│   ├── train_lora.py         # 训练Lora模型，模型存储在output/Qwen3-0.6B里
+│   ├── train.py              # 训练全参数模型，模型存储在output/Qwen3-param里
+│   ├── infer.py              # 测试对比三个模型对同一个问题的回答
+│   ├── model_compare.py      # 对已经训练好的Lora模型和原来对比
+│   └── model_param.py        # 对已经训练好的全参模型和原来对比
+├── scripts/
+│   └── run.sh                # 实验运行脚本
+├── requirements.txt          # Python依赖包
+├── results/                  # 实验结果（训练曲线、性能表格、模型微调前后定量定性对比）
+└── README.md                 # 项目说明文档
+```
+
+
+
 
 ## 安装环境
 
